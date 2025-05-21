@@ -1,0 +1,345 @@
+html {
+  font-family: "Palatino Linotype";
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  background-color: #1c87c9;
+  padding-top: 60px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(119, 119, 119, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.navbar-left a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.right-logo img {
+  width: 60px;
+  height: auto;
+}
+
+table {
+  width: 800px;
+  background-color: beige;
+  border: 1px solid #1c87c9;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+
+th, td {
+  border: 1px solid #1c87c9;
+  padding: 0 0.05cm;
+}
+
+th {
+  height: 40px;
+}
+
+.table-container {
+  max-height: 800px;
+  overflow-y: auto;
+  border: none;
+}
+
+.t1 {
+  table-layout: fixed;
+}
+
+.th-left, .td-left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.table-top {
+  background-color: #1c87c9;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+  font-size: small;
+}
+
+img {
+  padding: 2px;
+  width: 80px;
+}
+
+.button, .button-encours {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+
+.button {
+  background-color: #3f6fad;
+}
+
+.button-encours {
+  background-color: #1e06a1;
+  font-size: large;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: white;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+a:active {
+  color: blue;
+}
+
+footer {
+  background-color: rgba(119, 119, 119, 0.8);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 60px;
+  background-color: #e6e6e6;
+  z-index: 100;
+}
+
+.sticky-header th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 1000px) {
+  #navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .right-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: rgba(119, 119, 119, 0.95);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 10px;
+  }
+
+  .navbar-left.show {
+    max-height: 500px;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+/* Pour la ligne de titre */
+.responsive-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  max-width: 900px; /* Limite la largeur totale */
+  margin: auto;     /* Centre le bloc */
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.title-logo {
+  width: 50px;
+  height: auto;
+  flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+
+.title-text {
+  font-size: 1.5rem;
+  margin: 0;
+  flex: 1;
+  max-width: 100%;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  .responsive-title {
+    flex-direction: column;
+  }
+
+  .title-text {
+    font-size: 1.2rem;
+  }
+
+  .title-logo {
+    display: none;
+  }
+}
+/* Fin Pour la ligne de titre */
+
+/* Pour la ligne de boutons 500, 350, 250, ... */
+/* Style de base pour la table */
+.responsive-table {
+  width: 1000;
+  border-collapse: collapse;
+}
+
+/* Style pour les cellules de la table */
+.responsive-table th {
+  background-color: #1c87c9;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Style pour les boutons dans la table */
+.responsive-table button {
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+
+.responsive-table button:hover {
+  background-color: #1e06a1;
+}
+
+/* Style pour les liens dans les boutons */
+.responsive-table button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 800px) {
+  .responsive-table {
+    width: 100%;
+  }
+  .responsive-table th {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .responsive-table button {
+    width: 90%;
+    margin-bottom: 4px;
+  }
+  .responsive-table button:hover {
+    background-color: #1e06a1;
+    width: 90%;
+  }
+}
+/* FIN Pour la ligne de boutons 500, 350, 250, ... */
+
+/* Pour le tableau des informations */
+.info-grid {
+  display: grid;
+  width: 800px;
+  grid-template-columns: 1fr 5fr;
+  background-color: #e6e6e6;
+  padding: 2px;
+  max-width: 1000px;
+  margin: 20px auto;
+  gap: 5px;
+}
+
+.info-label {
+  font-weight: bold;
+  text-align: left;
+  row-gap: 10px;
+  border-top: 1px solid #1c87c9;
+  border-left: 1px solid #1c87c9;
+  padding: 5px;
+ 
+}
+.info-value {
+  text-align: left;
+  border-top: 1px solid #1c87c9;
+  border-left: 1px solid #1c87c9;
+  padding: 5px;
+}
+
+.grey {
+  color: #838383;
+}
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    width: 96%;
+  }
+
+  .info-label {
+    color: white;
+    background-color: rgb(119, 119, 119);
+    margin-bottom: 4px;
+  }
+}
+/* Fin Pour le tableau des informations */

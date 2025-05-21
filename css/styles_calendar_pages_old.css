@@ -1,0 +1,205 @@
+html {
+   font-family: Arial, Helvetica, sans-serif;
+   display: inline-block;
+   margin: 0px auto;
+   text-align: center;
+}
+
+/* ----------------------Style de la navbar------------ */
+#navbar {
+   position: sticky;
+   top: 0;
+   background-color: #777;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   z-index: 1000;
+ }
+ 
+ /* Liens à gauche */
+ .navbar-left a {
+   color: #f2f2f2;
+   text-decoration: none;
+   margin-right: 15px;
+   padding: 8px 12px;
+   transition: background-color 0.3s;
+ }
+ 
+ .navbar-left a:hover {
+   background-color: #555;
+   color: hotpink;
+   border-radius: 4px;
+ }
+ 
+ /* Partie droite : logos + titre */
+ .navbar-right {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ /* Titre IMRRA */
+ .navbar-title {
+   color: #f2f2f2;
+   font-size: 1.2em;
+   font-weight: bold;
+ }
+ 
+ /* Emplacements logos (remplace plus tard par <img>) */
+ .logo-img {
+   width: 60px; 
+   height: auto;
+   display: block;
+ }
+/* -----------------fin Style de la navbar------------ */
+
+body {
+   background-color: #1c87c9;
+}
+table {
+   margin-left: auto;
+   margin-right: auto;
+   background-color: beige;
+   border: none;
+   border-collapse: collapse;
+   text-align: center;
+}
+.table-1 {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+ }
+.t1 {
+   table-layout: fixed;
+}
+/*tr:hover {
+    background-color: #D6EEEE;
+}*/
+th, td {
+   border: none; 
+   padding: 0cm 0.05cm;
+   font-size: small;
+}
+p {
+   text-align: center ;
+   
+}
+img {
+   padding: 2px;
+   width: 80px;
+}
+ .button {
+    background-color: #1e06a1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    height: 40px;
+    width: 100px;
+}
+.button-grey {
+   background-color:grey;
+   border: none;
+   border-radius: 8px;
+   color: white;
+   height: 40px;
+   width: 100px;
+}
+.button:hover {
+   transform: scale(1.2); /* Agrandit le texte du lien */
+}
+/* Pour la tableau général de la page calendar */
+.tab-cal {
+   width: 800px;
+   background-color: inherit;
+   border: none;
+   border-collapse: collapse;
+   text-align: center;
+}
+.tab-cal th,td{
+   height: 50px;
+   padding: 15px;
+   border: none; 
+   padding: 0cm 0.05cm;
+}
+.tab-cal tr:hover {
+   background-color: inherit;
+}
+/*--------------------------------------------------------------*/
+.horizontal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .horizontal-buttons button {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .submenu-container {
+    position: absolute;
+    top: 100px; /* position fixe */
+    left: calc(30% - 50px);
+    display: none;
+    flex-direction: row;
+    gap: 5px;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    z-index: 10;
+  }
+  
+  .submenu-container.active {
+    display: flex;
+  }
+  
+  .submenu-container button {
+    padding: 8px 12px;
+    margin: 2px 0;
+  }
+
+  #year-frame {
+    position: absolute;
+    top: 300px; /* même hauteur que le sous-menu */
+    left: 560px; /* suffisamment à droite du sous-menu */
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+  }
+/*--------------------------------------------------------------*/
+.text-box {
+   color: #777;
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #97c3f5; /* Fond du texte différent */
+   border-radius: 5px;
+   font-weight: bold;
+}
+.text-box a {
+   color: black;
+   text-decoration: none;
+   transition: transform 0.2s ease-in-out;
+   display: inline-block;
+ }
+.text-box a:hover {
+   transform: scale(1.5); /* Agrandit le texte du lien */
+ }
+  /* Style the footer */
+  footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #777;
+   padding: 10px;
+   text-align: center;
+   color: white;
+ }
+ 

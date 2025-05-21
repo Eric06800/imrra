@@ -1,0 +1,150 @@
+html {
+    font-family: Helvetica;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+ }
+
+  
+ body {
+    background-color: #1c87c9;
+ }
+ table {
+    background-color: beige;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+ }
+ .t1 {
+    table-layout: fixed;
+ }
+ tr:hover {
+     background-color: #D6EEEE;
+ }
+ th, td {
+    border: 1px solid #808080; 
+    padding: 0cm 0.05cm;
+ }
+ p {
+    text-align: center;
+    font-size: small;
+ }
+ img {
+    padding: 2px;
+    width: 80px;
+ }
+ /* Exception pour l'image principale */
+ .hero-image {
+   padding: 0;
+   width: 100%;
+   max-width: 1000px; /* ou selon ce que tu veux */
+   display: block;
+   margin: 0 auto;
+ }
+ 
+  .button {
+     background-color: #1e06a1;
+     border: none;
+     border-radius: 10px;
+     color: white;
+     height: 40px;
+     width: 90px;
+ }
+  /* unvisited link */
+  a:link {
+     color: white;
+   }
+   
+   /* visited link */
+   a:visited {
+     color: white;
+   }
+   
+   /* mouse over link */
+   a:hover {
+     color: hotpink;
+   }
+   
+   /* selected link */
+   a:active {
+     color: blue;
+   } 
+   /* Style the footer */
+ footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+ /*-------------Style pour la barre de nav à gauche---------------------------*/
+nav ul {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 260px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #3b3b3b;
+}
+nav ul li {
+	list-style: none;
+}
+nav ul li a {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #fff;
+	position: relative;
+	padding: 25px 0 25px 38px;
+}
+nav ul li a:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 0%;
+	height: 100%;
+	background: #e3e9f7;
+	border-radius: 40px 0px 0px 40px;
+	z-index: -1;
+	transition: all 300ms ease-in-out;
+}
+nav ul li a:hover {
+	color: #2b2626;
+}
+nav ul li a:hover:before {
+	width: 95%;
+}
+.wrapper {
+	margin-left: 260px;
+}
+.section {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	text-align: center;
+}
+.box-area h2 {
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.box-area p {
+	line-height: 2;
+}
+.box-area {
+	width: 75%;
+}
+.logo {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 25px auto;
+}
+.logo img {
+	width: 100%;
+}

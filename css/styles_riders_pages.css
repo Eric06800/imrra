@@ -1,0 +1,102 @@
+html {
+   font-family: Helvetica;
+   display: inline-block;
+   margin: 0px auto;
+   text-align: center;
+}
+body {
+   background-color: #1c87c9;
+   margin: 0;
+   display: flex;
+   font-family: sans-serif;
+ }
+
+ .sidebar {
+   width: 80px;
+   background-color: #333;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 10px;
+ }
+
+ .sidebar button {
+   background: none;
+   border: none;
+   color: white;
+   padding: 10px;
+   width: 100%;
+   cursor: pointer;
+   transition: background 0.3s;
+ }
+
+ .sidebar button:hover {
+   background-color: #555;
+ }
+
+ .content {
+   flex: 1;
+   padding: 20px;
+   background-color: #f4f4f4;
+ }
+  
+table {
+   background-color: beige;
+   border: 1px solid black;
+   border-collapse: collapse;
+   text-align: center;
+}
+.t1 {
+   table-layout: fixed;
+}
+tr:hover {
+    background-color: #D6EEEE;
+}
+th, td {
+   border: 1px solid #808080; 
+   padding: 0cm 0.05cm;
+}
+p {
+   text-align: center;
+   font-size: small;
+}
+img {
+   padding: 2px;
+   width: 80px;
+}
+ .button {
+    background-color: #1e06a1;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 90px;
+}
+ /* unvisited link */
+ a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  } 
+  /* Style the footer */
+footer {
+   background-color: #777;
+   padding: 10px;
+   text-align: center;
+   color: white;
+ }
+ 

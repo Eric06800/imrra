@@ -1,0 +1,87 @@
+/*--- à n'utiliser qu'en complément de tyles.css ------------*/
+
+.table-glo {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 34px;
+  background-color: beige;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.table-glo th,
+.table-glo td {
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+}
+.table-glo td a {
+  color: black;
+  text-decoration: none;
+}
+.table-glo .empty {
+  display: none;
+}
+.table-glo tr:nth-child(even) {
+  background-color: #eee ;
+}
+.table-laps {
+  width: fit-content;
+  background-color: beige;
+}
+.table-laps td {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* Fixer l'en-tête */
+.table-glo th {
+  position: sticky;
+  top: 0;
+  background-color: #e6e6e6; /* même couleur que dans le HTML */
+  z-index: 10;
+}
+.table-glo thead tr {
+  background-color: #e6e6e6;
+}
+/* Optionnel : mettre la première colonne en gras */
+.table-glo td:first-child,
+.table-glo th:first-child {
+  font-weight: bold;
+}
+.t1 {
+  table-layout: fixed;
+}
+/* Pour rendre le tableau responsive */
+
+@media only screen and (max-width: 768px) {
+  .table-glo {
+    min-width: 350px;
+  }
+  .table-glo th {
+    display: none;
+  }
+  .table-glo td {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: right;
+  }
+  .table-glo td::before {
+    content: attr(data-label);
+    float: left;
+    color: #444;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .table-glo td:first-child {
+    padding-top: 1rem;
+  }
+  .table-glo td:last-child {
+    padding-bottom: 1rem;
+  }
+
+}

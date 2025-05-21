@@ -1,0 +1,22 @@
+th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+}
+td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+a.race:link {
+  color: black !important;
+}
+
+a.race:visited {
+  color: black !important;
+}

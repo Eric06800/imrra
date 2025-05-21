@@ -1,0 +1,141 @@
+html {
+   font-family: Palatino Linotype;
+   display: inline-block;
+   margin: 0px auto;
+   text-align: center;
+}
+
+/* Style de la navbar */
+#navbar {
+   position: sticky;
+   top: 0;
+   background-color: #777;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 10px;
+   z-index: 1000;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+ }
+ 
+ /* Liens à gauche */
+ .navbar-left a {
+   color: #f2f2f2;
+   text-decoration: none;
+   margin-right: 15px;
+   padding: 8px 12px;
+   transition: background-color 0.3s;
+ }
+ .navbar-left a img {
+  vertical-align: middle;
+  margin-right: 1px; /* espace entre l'icône et le texte */
+}
+ .navbar-left a:hover {
+   background-color: #555;
+   border-radius: 4px;
+ }
+ 
+ /* Titre IMRRA */
+ .navbar-title {
+   color: #f2f2f2;
+   font-size: 1em;
+   font-weight: bold;
+ }
+ 
+ /* Emplacements logos (remplace plus tard par <img>) */
+ .logo-img {
+   width: 60px; 
+   height: auto;
+   display: block;
+ }
+/* -----------------fin Style de la navbar------------ */
+
+body {
+   background-color: #1c87c9;
+}
+table {
+   background-color: beige;
+   border: 1px solid black;
+   border-collapse: collapse;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+.table-container {
+  max-height: 800px; /* Ajuste à ta convenance */
+  overflow-y: auto;
+  border: none;
+}
+th {
+  border: 1px solid #808080;
+  border-color: #1c87c9;
+  padding: 0cm 0.05cm;
+}
+td {
+  border: 1px solid #808080;
+  border-color: #1c87c9;
+  padding: 0cm 0.05cm;
+}
+p {
+   text-align: center;
+   font-size: small;
+}
+img {
+   padding: 2px;
+   width: 80px;
+}
+/* Exception pour l'image principale */
+.hero-image {
+  padding: 0;
+  width: 100%;
+  max-width: 1000px; /* ou selon ce que tu veux */
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #3f6fad;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+.button-encours {
+  background-color: #1e06a1;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+ /* unvisited link */
+ a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  .button:hover {
+    transform: scale(1.2); /* Agrandit le texte du lien */
+  }
+  /* selected link */
+  a:active {
+    color: blue;
+  } 
+  /* Style the footer */
+footer {
+   background-color: #777;
+   padding: 10px;
+   text-align: center;
+   color: white;
+ }

@@ -1,0 +1,246 @@
+html {
+   font-family: Palatino Linotype;
+   margin: 0px auto;
+}
+h1 {
+   text-align: center;
+}
+h2 {
+   text-align: center;
+}
+/* ----------------------Style de la navbar------------ */
+#navbar {
+   position: sticky;
+   top: 0;
+   background-color: #777;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   z-index: 1000;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+ }
+ 
+ /* Liens à gauche */
+ .navbar-left a {
+   color: #f2f2f2;
+   text-decoration: none;
+   margin-right: 15px;
+   padding: 8px 12px;
+   transition: background-color 0.3s;
+ }
+ .navbar-left a img {
+   vertical-align: middle;
+   margin-right: 1px; /* espace entre l'icône et le texte */
+ }
+ .navbar-left a:hover {
+   background-color: #555;
+   color: hotpink;
+   border-radius: 4px;
+ }
+ 
+ /* Partie droite : logos + titre */
+ .navbar-right {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ /* Titre IMRRA */
+ .navbar-title {
+   color: #f2f2f2;
+   font-size: 1.2em;
+   font-weight: bold;
+ }
+ 
+ /* Emplacements logos (remplace plus tard par <img>) */
+ .logo-img {
+   width: 60px; 
+   height: auto;
+   display: block;
+ }
+/* -----------------fin Style de la navbar------------ */
+
+body {
+   background-color: #1c87c9;
+}
+table {
+   margin-left: auto;
+   margin-right: auto;
+   background-color: beige;
+   border: none;
+   border-collapse: collapse;
+   text-align: center;
+}
+.table-1 {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+ }
+.table-1 tr td {
+   padding-left: 10px;
+}
+.table-1 tr th {
+   height: 40px;
+   border: 1px solid black; 
+   padding: 10px 10px;
+   font-size: small;
+   background-color: #808080;
+}
+.t1 {
+   table-layout: fixed;
+}
+/*tr:hover {
+    background-color: #D6EEEE;
+}*/
+th, td {
+   border: none; 
+   padding: 0cm 0.05cm;
+   font-size: small;
+}
+p {
+   text-align: center ;
+   
+}
+img {
+   padding: 2px;
+   width: 80px;
+}
+ .button {
+    background-color: #1e06a1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    height: 40px;
+    width: 100px;
+}
+.button-grey {
+   background-color:grey;
+   border: none;
+   border-radius: 8px;
+   color: white;
+   height: 40px;
+   width: 100px;
+}
+.button:hover {
+   transform: scale(1.2); /* Agrandit le texte du lien */
+}
+/* Pour la tableau général de la page calendar */
+.tab-cal {
+   width: 800px;
+   border-collapse: collapse;
+   text-align: center;
+}
+.tab-cal th,td{
+   height: 40px;
+   border: none; 
+   padding: 0cm 0.05cm;
+   font-size: small;
+}
+.tab-cal tr:hover {
+   background-color:#bdbdbd;
+}
+/*--------------------Menu dropdown -----------------------*/
+ul {
+    list-style: none;
+    background: #224488;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+ul li ul.dropdown li {
+    display:block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    background: #1c87c9;
+    position: absolute;
+    margin-left: 0px;
+    z-index: 10;
+    display: none;
+}
+ul li a:hover {
+    background: #112C66;/* couleur fond survolé quelque soit bouton H ou V */
+}
+ul li:hover ul.dropdown {
+    display: block;
+    position: absolute;
+    margin-left: -38px;
+}
+/* --------------------DEUXIEME ETAGE DU DROPDOWN (ANNEES)-----------------*/
+
+@keyframes fadeIn {  /*--- pourouverture douce du tableau ------*/
+   from { opacity: 0; }
+   to { opacity: 1; }
+ }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #777;
+   min-width: 600px;
+   padding: 10px;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+   z-index: 1000;
+ }
+ 
+ .dropdown-content table {
+   background-color: #777;
+   border-collapse: collapse;
+   width: 100%;
+ }
+ 
+ .dropdown-content td {
+   background-color: #777;
+   border: none;
+   padding: 8px;
+   text-align: center;
+ }
+ .dropdown-content td a {
+   text-decoration: none;
+   color: #f2f2f2; /* Même blanc que les liens de la navbar */
+   display: block;
+   padding: 5px;
+ }
+ .dropdown-content td a:hover {
+   background-color: #555; /* Même effet hover que dans la navbar */
+   color: hotpink;
+   border-radius: 4px;
+ }
+ .dropdown.open .dropdown-content {
+   display: block;
+   animation: fadeIn 0.2s ease-in-out;
+ }
+
+
+/*--------------------------------------------------------------*/
+
+  /* Style the footer */
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #777;
+   padding: 10px;
+   text-align: center;
+   color: white;
+}
+ 

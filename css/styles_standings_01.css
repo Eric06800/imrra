@@ -1,0 +1,28 @@
+/* -- CE FICHIER S'UTILISE IMPERATIVEMENT EN COMPLEMENT DE styles.css ----*/
+
+table {
+   width: 800px;
+
+}
+
+th {
+  height: 40px;
+}
+.table-top {
+  background-color: #1c87c9;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+   text-align: center;
+   font-size: small;
+}
+img {
+   padding: 2px;
+   width: 80px;
+}
+
+ 

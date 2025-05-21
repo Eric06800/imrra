@@ -1,0 +1,254 @@
+html {
+  font-family: Palatino Linotype;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+}
+
+/* ---------------Style de la navbar----------- */
+/* ----------- NAVBAR FIXÉE, FLOUTÉE, RESPONSIVE ----------- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  backdrop-filter: blur(8px);       /* 🎯 flou */
+  background-color: rgba(119, 119, 119, 0.8); /* 🎨 couleur semi-transparente */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);  /* 🌑 ombre */
+}
+
+/* Liens */
+.navbar-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.navbar-left a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Logo à droite */
+.right-logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .right-logo {
+    align-self: flex-end;
+  }
+}
+
+
+/* ------------Fin style de la navbar----------- */
+
+body {
+  background-color: #1c87c9;
+  padding-top: 60px; /* Pour ne pas que la navbar masque le haut du contenu */
+}
+
+table {
+  width: 800px;
+  background-color: beige;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  border: 1px solid #808080;
+  border-color: #1c87c9;
+  padding: 0cm 0.05cm;
+  height: 40px;
+}
+
+td {
+  border: 1px solid #808080;
+  border-color: #1c87c9;
+  padding: 0cm 0.05cm;
+}
+
+.table-container {
+  max-height: 800px; /* Ajuste à ta convenance */
+  overflow-y: auto;
+  border: none;
+}
+
+.t1 {
+  table-layout: fixed;
+}
+
+.th-left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.td-left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.table-top {
+  background-color: #1c87c9;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: center;
+  font-size: small;
+}
+
+img {
+  padding: 2px;
+  width: 80px;
+}
+
+.button {
+  background-color: #3f6fad;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+
+.button-encours {
+  background-color: #1e06a1;
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  height: 40px;
+  width: 90px;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+.button:hover {
+  transform: scale(1.2); /* Agrandit le texte du lien */
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgba(119, 119, 119, 0.8); /* 🎨 couleur semi-transparente */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+/* --- pour fixer la première ligne du tableau -- */
+/* Style pour la ligne sticky */
+.sticky-header {
+    position: sticky;
+    top: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre navbar */
+    background-color: #e6e6e6; /* Assurez-vous que le fond est visible */
+    z-index: 100; /* Assurez-vous que la ligne est au-dessus des autres éléments */
+}
+
+/* Style pour les cellules de la ligne sticky */
+.sticky-header th {
+    border: 1px solid black; /* Ajoutez la bordure intérieure */
+    padding: 8px; /* Ajoutez un peu de padding pour un meilleur rendu */
+}
+/* --- Hamburger button --- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Responsive navbar */
+@media (max-width: 1000px) {
+  #navbar {
+    flex-direction: column;
+    align-items: stretch;
+    position: fixed;
+  }
+
+  .right-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: rgba(119, 119, 119, 0.95);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 10px;
+  }
+
+  .navbar-left.show {
+    max-height: 500px; /* Ajuste selon le contenu */
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
